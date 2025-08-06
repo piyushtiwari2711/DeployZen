@@ -76,31 +76,38 @@ const Home = () => {
 
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Piyush Tiwari",
       role: "CEO & Founder",
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "10+ years in tech leadership, former Google engineer",
+      bio: "Tech innovator with a passion for clean code, scalable products, and empowering digital growth.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
-      name: "Michael Chen",
-      role: "CTO",
+      name: "Jai Goyal",
+      role: "Full Stack Developer",
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Full-stack architect with expertise in cloud infrastructure",
+      bio: "Passionate about building scalable, user-centric web & mobile applications from scratch to production.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
-      name: "Emily Rodriguez",
-      role: "Lead Designer",
+      name: "Swayam Agarwal",
+      role: "Frontend Developer",
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Award-winning UX/UI designer with a passion for user-centered design",
+      bio: "Transforms ideas into elegant web interfaces through thoughtful design and clean code.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
-      name: "David Kim",
-      role: "DevOps Engineer",
+      name: "Saurav Nayal",
+      role: "Full Stack Developer",
       image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Infrastructure specialist ensuring 99.9% uptime across all services",
+      bio:   "Experienced in both client-side finesse and server-side strength, turning ideas into full-fledged digital products.",
+      social: { github: "#", linkedin: "#", twitter: "#" }
+    },
+    {
+      name: "Mukul Lakhera",
+      role: "UI /UX Designer",
+      image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400",
+      bio: "Designing seamless user journeys with a perfect blend of creativity and usability",
       social: { github: "#", linkedin: "#", twitter: "#" }
     }
   ];
@@ -290,7 +297,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Our Portfolio
+              Our Projects
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Showcasing some of the amazing projects we've helped deploy and scale
@@ -351,11 +358,11 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex gap-8 overflow-x-auto">
             {teamMembers.map((member, index) => (
               <div 
                 key={index}
-                className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 w-80"
               >
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"></div>
@@ -492,24 +499,6 @@ const Home = () => {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative z-10 py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-3xl p-12 border border-gray-600/30">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ready to Deploy with <span className="text-cyan-400">Confidence</span>?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers who trust DeployZen for their deployment needs
-            </p>
-            <button className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105">
-              <span className="relative z-10">Start Your Journey</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-            </button>
           </div>
         </div>
       </section>
