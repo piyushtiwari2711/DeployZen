@@ -78,36 +78,36 @@ const Home = () => {
     {
       name: "Piyush Tiwari",
       role: "CEO & Founder",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/piyush.png",
       bio: "Tech innovator with a passion for clean code, scalable products, and empowering digital growth.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
       name: "Jai Goyal",
       role: "Full Stack Developer",
-      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/jai.png",
       bio: "Passionate about building scalable, user-centric web & mobile applications from scratch to production.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
       name: "Swayam Agarwal",
       role: "Frontend Developer",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/swayam.png",
       bio: "Transforms ideas into elegant web interfaces through thoughtful design and clean code.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
       name: "Saurav Nayal",
       role: "Full Stack Developer",
-      image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "/saurav.png",
       bio:   "Experienced in both client-side finesse and server-side strength, turning ideas into full-fledged digital products.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
     {
       name: "Mukul Lakhera",
       role: "UI /UX Designer",
-      image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Designing seamless user journeys with a perfect blend of creativity and usability",
+      image: "/mukul.png",
+      bio: "Designing seamless user journeys with a perfect blend of creativity and usability.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     }
   ];
@@ -358,7 +358,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="flex gap-8 overflow-x-auto">
+          <div className="flex gap-8">
             {teamMembers.map((member, index) => (
               <div 
                 key={index}
