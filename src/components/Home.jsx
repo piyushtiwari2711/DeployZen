@@ -218,9 +218,8 @@ const Home = () => {
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {/* Web Development */}
-      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10">
+      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
         <div className="bg-green-100 p-6 rounded-full mb-6">
-          {/* Computer Icon */}
           <svg width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="2" viewBox="0 0 24 24">
             <rect x="3" y="4" width="18" height="12" rx="2" />
             <path d="M8 20h8M12 16v4" />
@@ -235,9 +234,8 @@ const Home = () => {
         </ul>
       </div>
       {/* App Development */}
-      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10">
+      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
         <div className="bg-green-100 p-6 rounded-full mb-6">
-          {/* Mobile Icon */}
           <svg width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="2" viewBox="0 0 24 24">
             <rect x="7" y="2" width="10" height="20" rx="2" />
             <circle cx="12" cy="18" r="1" />
@@ -252,9 +250,8 @@ const Home = () => {
         </ul>
       </div>
       {/* UI/UX Design */}
-      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10">
+      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
         <div className="bg-green-100 p-6 rounded-full mb-6">
-          {/* Palette Icon */}
           <svg width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <circle cx="8.5" cy="10.5" r="1" />
@@ -271,9 +268,8 @@ const Home = () => {
         </ul>
       </div>
       {/* Branding */}
-      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10">
+      <div className="bg-white/5 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-white/10 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
         <div className="bg-green-100 p-6 rounded-full mb-6">
-          {/* Layers Icon */}
           <svg width="40" height="40" fill="none" stroke="#22d3ee" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M12 2L2 7l10 5 10-5-10-5z" />
             <path d="M2 17l10 5 10-5" />
