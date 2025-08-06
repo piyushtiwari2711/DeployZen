@@ -23,7 +23,7 @@ const Header = () => {
   // Track active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'why-choose-us', 'portfolio', 'team', 'contact'];
+      const sections = ['home', 'about', 'services', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 150; // Offset for header
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -42,9 +42,9 @@ const Header = () => {
   const navLinks = [
     { to: 'home', text: 'Home' },
     { to: 'about', text: 'About' },
-    { to: 'why-choose-us', text: 'Why Choose Us' },
-    { to: 'portfolio', text: 'Portfolio' },
-    { to: 'team', text: 'Team' },
+    { to: 'services', text: 'Services' },
+    { to: 'portfolio', text: 'Projects' },
+    //{ to: 'team', text: 'Team' },
     { to: 'contact', text: 'Contact' },
   ];
 

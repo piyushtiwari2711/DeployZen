@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Zap, Shield, Rocket, Globe, Code, Users, ArrowRight, Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Zap, Shield, Rocket, Globe, Code, Users, ArrowRight, Mail, Phone, MapPin, Github, Linkedin, Twitter,Instagram } from 'lucide-react';
 import AnimatedBackground from './AnimatedBackground';
 import FeatureCard from './FeatureCard';
 
@@ -420,25 +420,34 @@ const Home = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <p className="text-white">hello@deployzen.com</p>
+                      <p className="text-white">deployzen@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-white" />
+                      <Instagram className="w-6 h-6 text-white" /> 
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm">Phone</p>
-                      <p className="text-white">+1 (555) 123-4567</p>
+                      <p className="text-gray-400 text-sm"></p>
+                      <p className="text-white">Insta</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-white" />
+                      <Linkedin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm">Address</p>
-                      <p className="text-white">123 Tech Street, San Francisco, CA 94105</p>
+                      <p className="text-gray-400 text-sm"></p>
+                      <p className="text-white">Linkedin</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <Twitter className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-400 text-sm"></p>
+                      <p className="text-white">Twitter</p>
                     </div>
                   </div>
                 </div>

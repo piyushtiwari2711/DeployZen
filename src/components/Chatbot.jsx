@@ -99,20 +99,20 @@ const Chatbot = () => {
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center animate-pulse">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
                   <Bot className="h-6 w-6 text-white" />
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-ping"></div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-blue-400 rounded-full border-2 border-white animate-ping"></div>
               </div>
               <div>
                 <h3 className="font-bold text-lg">DeployBot</h3>
-                <p className="text-xs text-green-400">Online • Ready to help</p>
+                <p className="text-xs text-blue-400">Online • Ready to help</p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => setIsMinimized(!isMinimized)}
-                className="text-white hover:text-green-400 transition-colors duration-300 p-1 hover:bg-white/10 rounded"
+                className="text-white hover:text-blue-400 transition-colors duration-300 p-1 hover:bg-white/10 rounded"
               >
                 {isMinimized ? <Maximize2 className="h-4 w-4" /> : <Minimize2 className="h-4 w-4" />}
               </button>
@@ -135,7 +135,7 @@ const Chatbot = () => {
                   >
                     <div className={`flex items-end space-x-2 max-w-xs ${message.isBot ? 'flex-row' : 'flex-row-reverse space-x-reverse'}`}>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        message.isBot ? 'bg-green-500' : 'bg-slate-700'
+                        message.isBot ? 'bg-blue-500' : 'bg-slate-700'
                       }`}>
                         {message.isBot ? (
                           <Bot className="h-4 w-4 text-white" />
@@ -146,11 +146,11 @@ const Chatbot = () => {
                       <div className={`rounded-2xl px-4 py-2 ${
                         message.isBot 
                           ? 'bg-white text-gray-800 shadow-md' 
-                          : 'bg-green-500 text-white'
+                          : 'bg-blue-500 text-white'
                       }`}>
                         <p className="text-sm whitespace-pre-line">{message.text}</p>
                         <p className={`text-xs mt-1 ${
-                          message.isBot ? 'text-gray-500' : 'text-green-100'
+                          message.isBot ? 'text-gray-500' : 'text-blue-100'
                         }`}>
                           {formatTime(message.timestamp)}
                         </p>
@@ -162,7 +162,7 @@ const Chatbot = () => {
                 {isTyping && (
                   <div className="flex justify-start animate-fade-in">
                     <div className="flex items-end space-x-2 max-w-xs">
-                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                         <Bot className="h-4 w-4 text-white" />
                       </div>
                       <div className="bg-white rounded-2xl px-4 py-2 shadow-md">
@@ -187,7 +187,7 @@ const Chatbot = () => {
                       <button
                         key={index}
                         onClick={() => handleQuickReply(reply)}
-                        className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full hover:bg-green-200 transition-colors duration-300 animate-fade-in"
+                        className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200 transition-colors duration-300 animate-fade-in"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
                         {reply}
@@ -205,12 +205,12 @@ const Chatbot = () => {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                     placeholder="Type your message..."
-                    className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                    className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   />
                   <button
                     onClick={handleSendMessage}
                     disabled={!inputValue.trim()}
-                    className="bg-green-500 hover:bg-green-600 disabled:bg-gray-300 text-white p-2 rounded-full transition-all duration-300 transform hover:scale-105 disabled:scale-100"
+                    className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white p-2 rounded-full transition-all duration-300 transform hover:scale-105 disabled:scale-100"
                   >
                     <Send className="h-4 w-4" />
                   </button>
@@ -224,7 +224,7 @@ const Chatbot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`group relative bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-4 rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 ${
+          className={`group relative bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white p-4 rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 ${
             isOpen ? 'rotate-180' : 'animate-bounce'
           }`}
         >
@@ -240,7 +240,7 @@ const Chatbot = () => {
             </div>
           )}
 
-          <div className="absolute inset-0 rounded-full bg-green-400 opacity-30 animate-ping"></div>
+          <div className="absolute inset-0 rounded-full bg-blue-400 opacity-30 animate-ping"></div>
 
           <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Chat with DeployBot
