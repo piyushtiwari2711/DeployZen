@@ -18,25 +18,23 @@ const Footer = () => {
           {/* Logo and Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-green-500 p-2 rounded-lg">
-                <Code className="h-6 w-6 text-white" />
-              </div>
+              
               <span className="text-2xl font-bold">DeployZen</span>
             </div>
             <p className="text-gray-300 text-lg mb-6 max-w-md">
               You dream it, we build it. Transforming ideas into powerful digital solutions that drive business growth.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
+              <a href="https://www.linkedin.com/company/deployzen2711/" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
+              <a href="https://www.instagram.com/deployzen?igsh=azYxM2JlYjBkdjh0" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
                 <Instagram className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="mailto:hello@deployzen.com" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
+              <a href="mailto:web.deployzen@gmail.com" className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110">
                 <Mail className="h-6 w-6" />
               </a>
             </div>

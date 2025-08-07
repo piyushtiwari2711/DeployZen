@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Zap, Shield, Rocket, Globe, Code, Users, ArrowRight, Mail, Phone, MapPin, Github, Linkedin, Twitter,Instagram } from 'lucide-react';
 import AnimatedBackground from './AnimatedBackground';
 import FeatureCard from './FeatureCard';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
@@ -45,18 +47,18 @@ const Home = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Creating Dimensions",
       description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#"
+      tech: ["React", "Node.js","Firebase","Razorpay"],
+      link: "https://creating-dimensions.vercel.app/"
     },
     {
-      title: "Task Management App",
+      title: "GhostGram",
       description: "Collaborative project management tool with real-time updates",
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
       tech: ["Vue.js", "Firebase", "Tailwind CSS"],
-      link: "#"
+      link: "https://ghostgram.nayalsaurav.tech/"
     },
     {
       title: "Analytics Dashboard",
@@ -71,14 +73,16 @@ const Home = () => {
       image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=600",
       tech: ["React Native", "Node.js", "AWS", "Blockchain"],
       link: "#"
-    }
+    },
+    
+
   ];
 
   const teamMembers = [
     {
       name: "Piyush Tiwari",
       role: "CEO & Founder",
-      image: "/piyush.png",
+      image: "./piyush.png",
       bio: "Tech innovator with a passion for clean code, scalable products, and empowering digital growth.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
@@ -130,11 +134,27 @@ const Home = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <button className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105">
+            <button
+              className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <span className="relative z-10">Start Your Project</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
             </button>
-            <button className="group border-2 border-gray-600 hover:border-cyan-400 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg hover:bg-gray-800/50 backdrop-blur-sm">
+            <button
+              className="group border-2 border-gray-600 hover:border-cyan-400 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg hover:bg-gray-800/50 backdrop-blur-sm"
+              onClick={() => {
+                const projectsSection = document.getElementById('portfolio');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <span className="group-hover:text-cyan-300 transition-colors duration-300">View Our Work</span>
             </button>
           </div>
@@ -304,46 +324,58 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div 
-                key={index}
-                className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden hover:bg-gray-700/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
-              >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex}
-                        className="px-3 py-1 bg-gray-700/50 text-cyan-300 text-sm rounded-full border border-cyan-500/30"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <button className="group/btn flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
-                    <span>View Project</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+  {projects.slice(0,3).map((project, index) => (
+    <div 
+      key={index}
+      className="flex flex-col items-center bg-gray-800/60 backdrop-blur-lg border border-cyan-500/20 rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-500 hover:scale-105 w-full max-w-sm mx-auto"
+    >
+      <div className="w-full h-52 overflow-hidden flex justify-center items-center bg-gray-900">
+        <img 
+          src={project.image} 
+          alt={project.title}
+          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <div className="flex flex-col items-center p-7 w-full">
+        <h3 className="text-xl font-bold mb-3 text-cyan-400 text-center">{project.title}</h3>
+        <p className="text-gray-300 mb-5 text-center">{project.description}</p>
+        <div className="flex flex-wrap justify-center gap-3 mb-5">
+          {project.tech.map((tech, techIndex) => (
+            <span 
+              key={techIndex}
+              className="px-3 py-1 bg-cyan-900/40 text-cyan-300 text-sm rounded-full border border-cyan-500/30"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/btn flex items-center space-x-2 text-cyan-400 hover:text-cyan-200 font-semibold transition-colors duration-300 mt-2 text-base"
+        >
+          <span>View Project</span>
+          <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
+{/* Add this button below the cards */}
+<div className="flex justify-center mt-10">
+  <button
+    className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105 flex items-center space-x-2"
+    onClick={() => navigate("/projects")}
+  >
+    <span>View All Projects</span>
+    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+  </button>
+</div>
+
+      </div>
       </section>
 
       {/* Team Section */}
@@ -420,25 +452,39 @@ const Home = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <p className="text-white">deployzen@gmail.com</p>
+                      <p className="text-white">web.deployzen@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <a
+                        href="https://www.instagram.com/deployzen?igsh=azYxM2JlYjBkdjh0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                      >
                       <Instagram className="w-6 h-6 text-white" /> 
+                      </a>
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm"></p>
-                      <p className="text-white">Insta</p>
+                      <p className="text-gray-400 text-sm">Instagram</p>
+                      <p className="text-white">deployzen</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <a
+                       href="https://www.linkedin.com/company/deployzen2711/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram"
+                      >
                       <Linkedin className="w-6 h-6 text-white" />
+                      </a>
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm"></p>
-                      <p className="text-white">Linkedin</p>
+                      <p className="text-gray-400 text-sm">Linkedin</p>
+                      <p className="text-white">DeployZen</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
