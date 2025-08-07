@@ -82,7 +82,7 @@ const Home = () => {
     {
       name: "Piyush Tiwari",
       role: "CEO & Founder",
-      image: "./piyush.png",
+      image: "/piyush.png",
       bio: "Tech innovator with a passion for clean code, scalable products, and empowering digital growth.",
       social: { github: "#", linkedin: "#", twitter: "#" }
     },
