@@ -61,11 +61,11 @@ const Home = () => {
       link: "https://ghostgram.nayalsaurav.tech/"
     },
     {
-      title: "Analytics Dashboard",
-      description: "Real-time data visualization and business intelligence platform",
+      title: "CoFlow",
+      description: "A collaborative workflow management tool designed to streamline team projects and boost productivity.",
       image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tech: ["React", "D3.js", "Python", "PostgreSQL"],
-      link: "#"
+      tech: ["React", "Node.js", "MongoDB", "Socket.IO"],
+      link: "https://coflow-7r11.onrender.com/"
     },
     {
       title: "Mobile Banking App",
@@ -137,25 +137,25 @@ const Home = () => {
             <button
               className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
               onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              <span className="relative z-10">Start Your Project</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-            </button>
-            <button
-              className="group border-2 border-gray-600 hover:border-cyan-400 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg hover:bg-gray-800/50 backdrop-blur-sm"
-              onClick={() => {
                 const projectsSection = document.getElementById('portfolio');
                 if (projectsSection) {
                   projectsSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
             >
-              <span className="group-hover:text-cyan-300 transition-colors duration-300">View Our Work</span>
+              <span className="relative z-10">View Projects</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+            </button>
+            <button
+              className="group border-2 border-gray-600 hover:border-cyan-400 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg hover:bg-gray-800/50 backdrop-blur-sm"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              <span className="group-hover:text-cyan-300 transition-colors duration-300">Contact Us</span>
             </button>
           </div>
 
