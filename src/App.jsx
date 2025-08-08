@@ -1,8 +1,8 @@
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import Home from "./components/Home";
+import {Home} from "./pages/Home";
 import Footer from "./components/Footer";
-import { ProjectSection } from "./components/ProjectSection";
+import { Project } from "./pages/Project";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectSection />} />
+          <Route path="/projects" element={<Project />} />
         </Routes>
         <Footer />
       </div>

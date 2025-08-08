@@ -1,22 +1,22 @@
 import React from 'react';
 
+const codeSnippets = [
+  'const deploy = () => {}',
+  'npm run build',
+  'git push origin main',
+  'docker build -t app .',
+  'kubectl apply -f',
+  'terraform apply',
+  'console.log("Hello")',
+  'import React from "react"',
+  'export default App',
+  'async/await',
+  'API_KEY=secret',
+  'PORT=3000'
+];
+const techIcons = ['⚛️', '🚀', '⚡', '🔧', '💻', '🌐', '📦', '🔥', '💎', '🎯'];
 const AnimatedBackground = () => {
-  const codeSnippets = [
-    'const deploy = () => {}',
-    'npm run build',
-    'git push origin main',
-    'docker build -t app .',
-    'kubectl apply -f',
-    'terraform apply',
-    'console.log("Hello")',
-    'import React from "react"',
-    'export default App',
-    'async/await',
-    'API_KEY=secret',
-    'PORT=3000'
-  ];
 
-  const techIcons = ['⚛️', '🚀', '⚡', '🔧', '💻', '🌐', '📦', '🔥', '💎', '🎯'];
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none bg-black">
@@ -177,23 +177,6 @@ const AnimatedBackground = () => {
           backgroundSize: '50px 50px'
         }}
       />
-
-      <style jsx>{`
-        @keyframes matrixFall {
-          0% { transform: translateY(-100vh); }
-          100% { transform: translateY(100vh); }
-        }
-        
-        @keyframes terminalGlow {
-          0% { box-shadow: 0 0 5px rgba(0, 245, 255, 0.2); }
-          100% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.4); }
-        }
-        
-        @keyframes particleFloat {
-          0% { transform: translateY(0px) scale(1); opacity: 0.3; }
-          100% { transform: translateY(-20px) scale(1.2); opacity: 0.6; }
-        }
-      `}</style>
     </div>
   );
 };

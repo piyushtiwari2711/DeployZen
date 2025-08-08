@@ -27,3 +27,29 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #0891b2;
 }
+
+/* Register animations as Tailwind utilities */
+@layer utilities {
+  @keyframes matrixFall {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+  }
+  @keyframes terminalGlow {
+    0% { box-shadow: 0 0 5px rgba(0, 245, 255, 0.2); }
+    100% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.4); }
+  }
+  @keyframes particleFloat {
+    0% { transform: translateY(0px) scale(1); opacity: 0.3; }
+    100% { transform: translateY(-20px) scale(1.2); opacity: 0.6; }
+  }
+
+  .animate-matrixFall {
+    animation: matrixFall var(--duration, 5s) linear infinite;
+  }
+  .animate-terminalGlow {
+    animation: terminalGlow 4s ease-in-out infinite alternate;
+  }
+  .animate-particleFloat {
+    animation: particleFloat var(--duration, 3s) ease-in-out infinite alternate;
+  }
+}
