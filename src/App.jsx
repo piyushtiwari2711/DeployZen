@@ -2,8 +2,6 @@ import React from 'react';
 import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
-
-import Chatbot from './components/Chatbot';
 import Projects from "./components/Projects";  
 import Footer from'./components/Footer';
 
@@ -19,7 +17,6 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
-        <Chatbot />
       </div>
     </Router>
   );

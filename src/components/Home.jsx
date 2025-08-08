@@ -81,7 +81,7 @@ const Home = () => {
   const teamMembers = [
     {
       name: "Piyush Tiwari",
-      role: "CEO & Founder",
+      role: "Founder & Full Stack Developer",
       image: "/piyush.png",
       bio: "Tech innovator with a passion for clean code, scalable products, and empowering digital growth.",
       social: { github: "#", linkedin: "#", twitter: "#" }
@@ -130,7 +130,7 @@ const Home = () => {
             Your one-stop solution for
           </p>
           <p className="text-2xl md:text-3xl mb-12 text-gray-300 font-light">
-            <span className="text-cyan-400 font-semibold">seamless deployment</span> and <span className="text-blue-400 font-semibold">development services</span>
+            <span className="text-cyan-400 font-semibold">seamless development</span> and <span className="text-blue-400 font-semibold">deployment services</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -189,7 +189,7 @@ const Home = () => {
           DeployZen empowers startups and enterprises worldwide by transforming bold ideas into powerful digital solutions.
         </p>
         <h2 className="text-lg text-white leading-relaxed">
-          We connect dreamers, doers, and disruptors with elite developers, designers, and strategists — all under one roof. Whether it's building dynamic web platforms, scalable apps, or automation systems, we deliver end-to-end solutions that help your business grow, fast and fearlessly.
+          We connect dreamers, doers, and disruptors with elite developers, designers, and strategists — all under one roof. Whether it's building dynamic web platforms, scalable apps, or automation systems, we deliver end-to-end solutions that help your business grow, fast.
           You dream it, we build it — better, faster, and smarter.
         </h2>
         <div className="space-y-4">

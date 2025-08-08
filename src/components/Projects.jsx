@@ -11,31 +11,31 @@ const projects = [
     },
     {
       title: "GhostGram",
-      description: "Collaborative project management tool with real-time updates",
+      description: "GhostGram – Ask me anything, anonymously.",
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
+      tech: ["Next.js", "MongoDB", "Tailwind CSS","NextAuth.js"],
       link: "https://ghostgram.nayalsaurav.tech/"
     },
     {
-      title: "Analytics Dashboard",
-      description: "Real-time data visualization and business intelligence platform",
+      title: "CoFlow",
+      description: "A collaborative, browser based whiteboard enabling real‑time drawing and idea sharing among multiple users.",
       image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tech: ["React", "D3.js", "Python", "PostgreSQL"],
-      link: "#"
+      tech: ["React", "Socket.io", "Canvas API", "Node.js", "Express.js"],
+      link: "https://coflow-7r11.onrender.com/"
     },
+    // {
+    //   title: "",
+    //   description: "A modern and responsive developer portfolio built with React.js, Tailwind CSS, and Vite.",
+    //   image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //   tech: ["React.js", "Tailwind CSS","Vite"],
+    //   link: "https://piyushtiwari2711.vercel.app/"
+    // },
     {
-      title: "Portfolio",
-      description: "A modern and responsive developer portfolio built with React.js, Tailwind CSS, and Vite.",
-      image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tech: ["React.js", "Tailwind CSS","Vite"],
-      link: "https://piyushtiwari2711.vercel.app/"
-    },
-    {
-      title: "Mobile Banking App",
-      description: "Secure mobile banking solution with biometric authentication",
-      image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=600",
-      tech: ["React Native", "Node.js", "AWS", "Blockchain"],
-      link: "#"
+      title: "Apna Video Call",
+      description: "Apna Video Call – A simple video calling website with chat and screen sharing.",
+      image: "/Apnavideocall.png",
+      tech: ["React", "WebRtc", "Socket.io", "Node.js","MongoDB","Express.js"],
+      link: "https://apna-video-call0.onrender.com"
     },
 ];
 
