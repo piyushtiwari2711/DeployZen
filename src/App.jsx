@@ -1,11 +1,8 @@
-import React from 'react';
-import Header from './components/Header';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './components/Home';
-import Projects from "./components/Projects";  
-import Footer from'./components/Footer';
-
-
+import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,4 +20,3 @@ function App() {
 }
 
 export default App;
-
