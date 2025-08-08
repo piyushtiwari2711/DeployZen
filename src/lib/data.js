@@ -41,6 +41,7 @@ export const projects = [
 
 export const teamMembers = [
   {
+    id: 1,
     name: "Piyush Tiwari",
     role: "Founder & Full Stack Developer",
     image: "/piyush.png",
@@ -48,6 +49,7 @@ export const teamMembers = [
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
+    id: 2,
     name: "Jai Goyal",
     role: "Full Stack Developer",
     image: "/jai.png",
@@ -55,6 +57,7 @@ export const teamMembers = [
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
+    id: 3,
     name: "Swayam Agarwal",
     role: "Frontend Developer",
     image: "/swayam.png",
@@ -62,6 +65,7 @@ export const teamMembers = [
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
+    id: 4,
     name: "Saurav Nayal",
     role: "Full Stack Developer",
     image: "/saurav.png",
@@ -69,6 +73,7 @@ export const teamMembers = [
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
+    id: 5,
     name: "Mukul Lakhera",
     role: "UI /UX Designer",
     image: "/mukul.png",

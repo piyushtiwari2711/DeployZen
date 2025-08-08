@@ -18,6 +18,8 @@ import {
 import AnimatedBackground from "./AnimatedBackground";
 import FeatureCard from "./FeatureCard";
 import { useNavigate } from "react-router";
+import { TeamSection } from "./TeamSection";
+import { ProjectSection } from "./ProjectSection";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,44 +99,6 @@ const Home = () => {
         "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=600",
       tech: ["React Native", "Node.js", "AWS", "Blockchain"],
       link: "#",
-    },
-  ];
-
-  const teamMembers = [
-    {
-      name: "Piyush Tiwari",
-      role: "Founder & Full Stack Developer",
-      image: "/piyush.png",
-      bio: "Tech innovator with a passion for clean code, scalable products, and empowering digital growth.",
-      social: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-      name: "Jai Goyal",
-      role: "Full Stack Developer",
-      image: "/jai.png",
-      bio: "Passionate about building scalable, user-centric web & mobile applications from scratch to production.",
-      social: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-      name: "Swayam Agarwal",
-      role: "Frontend Developer",
-      image: "/swayam.png",
-      bio: "Transforms ideas into elegant web interfaces through thoughtful design and clean code.",
-      social: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-      name: "Saurav Nayal",
-      role: "Full Stack Developer",
-      image: "/saurav.png",
-      bio: "Experienced in both client-side finesse and server-side strength, turning ideas into full-fledged digital products.",
-      social: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-      name: "Mukul Lakhera",
-      role: "UI /UX Designer",
-      image: "/mukul.png",
-      bio: "Designing seamless user journeys with a perfect blend of creativity and usability.",
-      social: { github: "#", linkedin: "#", twitter: "#" },
     },
   ];
 
@@ -428,132 +392,10 @@ const Home = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="relative z-10 py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Our Projects
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Showcasing some of the amazing projects we've helped deploy and
-              scale
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
-            {projects.slice(0, 3).map((project, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center bg-gray-800/60 backdrop-blur-lg border border-cyan-500/20 rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-500 hover:scale-105 w-full max-w-sm mx-auto"
-              >
-                <div className="w-full h-52 overflow-hidden flex justify-center items-center bg-gray-900">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-col items-center p-7 w-full">
-                  <h3 className="text-xl font-bold mb-3 text-cyan-400 text-center">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-300 mb-5 text-center">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-3 mb-5">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-cyan-900/40 text-cyan-300 text-sm rounded-full border border-cyan-500/30"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/btn flex items-center space-x-2 text-cyan-400 hover:text-cyan-200 font-semibold transition-colors duration-300 mt-2 text-base"
-                  >
-                    <span>View Project</span>
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* Add this button below the cards */}
-          <div className="flex justify-center mt-10">
-            <button
-              className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105 flex items-center space-x-2"
-              onClick={() => navigate("/projects")}
-            >
-              <span>View All Projects</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-          </div>
-        </div>
-      </section>
+      <ProjectSection />
 
       {/* Team Section */}
-      <section id="team" className="relative z-10 py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              The brilliant minds behind DeployZen's success
-            </p>
-          </div>
-
-          <div className="flex gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 w-80"
-              >
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"></div>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-2 border-cyan-400/30 group-hover:border-cyan-400 transition-colors duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-cyan-300 transition-colors duration-300">
-                  {member.name}
-                </h3>
-                <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors duration-300">
-                  {member.bio}
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a
-                    href={member.social.github}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={member.social.linkedin}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={member.social.twitter}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamSection />
 
       {/* Contact Us Section */}
       <section id="contact" className="relative z-10 py-20 px-6">
