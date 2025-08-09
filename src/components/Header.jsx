@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
+import { Link, useLocation } from "react-router";
 
 const navLinks = [
   { to: "home", text: "Home" },
@@ -12,6 +13,7 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("home");
 
@@ -23,41 +25,58 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="/" className="hover:text-cyan-400 transition-colors duration-300">
-            DeployZen
-          </a>
+          {location.pathname === "/" ? (
+            <ScrollLink to="home" smooth={true} duration={500} offset={-80} className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+              DeployZen
+            </ScrollLink>
+          ) : (
+            <Link to="/" className="hover:text-cyan-400 transition-colors duration-300">
+              DeployZen
+            </Link>
+          )}
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <li key={link.to}>
-              <ScrollLink
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                spy={true}
-                onSetActive={() => setActive(link.to)} // Update active state
-                className="relative group text-lg cursor-pointer transition-colors duration-300"
-              >
-                <span
-                  className={
-                    active === link.to
-                      ? "text-cyan-400"
-                      : "text-white group-hover:text-cyan-400"
-                  }
+              {link.to === "home" ? (
+                location.pathname === "/" ? (
+                  <ScrollLink
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    spy={true}
+                    onSetActive={() => setActive("home")}
+                    className="relative group text-lg cursor-pointer transition-colors duration-300"
+                  >
+                    <span className={active === "home" ? "text-cyan-400" : "text-white group-hover:text-cyan-400"}>Home</span>
+                    <span className={`absolute bottom-[-2px] left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${active === "home" ? "w-full" : "w-0 group-hover:w-full"}`}></span>
+                  </ScrollLink>
+                ) : (
+                  <Link
+                    to="/"
+                    className="relative group text-lg cursor-pointer transition-colors duration-300"
+                  >
+                    <span className="text-white group-hover:text-cyan-400">Home</span>
+                    <span className="absolute bottom-[-2px] left-0 h-0.5 bg-cyan-400 transition-all duration-300 w-0 group-hover:w-full"></span>
+                  </Link>
+                )
+              ) : (
+                <ScrollLink
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  spy={true}
+                  onSetActive={() => setActive(link.to)}
+                  className="relative group text-lg cursor-pointer transition-colors duration-300"
                 >
-                  {link.text}
-                </span>
-                <span
-                  className={`absolute bottom-[-2px] left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${
-                    active === link.to
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
-                  }`}
-                ></span>
-              </ScrollLink>
+                  <span className={active === link.to ? "text-cyan-400" : "text-white group-hover:text-cyan-400"}>{link.text}</span>
+                  <span className={`absolute bottom-[-2px] left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${active === link.to ? "w-full" : "w-0 group-hover:w-full"}`}></span>
+                </ScrollLink>
+              )}
             </li>
           ))}
         </ul>
@@ -78,22 +97,43 @@ const Header = () => {
       >
         {navLinks.map((link) => (
           <li key={link.to} className="border-t border-gray-700">
-            <ScrollLink
-              to={link.to}
-              smooth={true}
-              duration={500}
-              offset={-80}
-              spy={true}
-              onSetActive={() => setActive(link.to)}
-              className={`block w-full text-center py-4 cursor-pointer transition-colors duration-300 ${
-                active === link.to
-                  ? "bg-gray-800 text-cyan-400"
-                  : "hover:bg-gray-800 text-white"
-              }`}
-              onClick={closeMenu}
-            >
-              {link.text}
-            </ScrollLink>
+            {link.to === "home" ? (
+              location.pathname === "/" ? (
+                <ScrollLink
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  spy={true}
+                  onSetActive={() => setActive("home")}
+                  className={`block w-full text-center py-4 cursor-pointer transition-colors duration-300 ${active === "home" ? "bg-gray-800 text-cyan-400" : "hover:bg-gray-800 text-white"}`}
+                  onClick={closeMenu}
+                >
+                  Home
+                </ScrollLink>
+              ) : (
+                <Link
+                  to="/"
+                  className="block w-full text-center py-4 cursor-pointer transition-colors duration-300 hover:bg-gray-800 text-white"
+                  onClick={closeMenu}
+                >
+                  Home
+                </Link>
+              )
+            ) : (
+              <ScrollLink
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                spy={true}
+                onSetActive={() => setActive(link.to)}
+                className={`block w-full text-center py-4 cursor-pointer transition-colors duration-300 ${active === link.to ? "bg-gray-800 text-cyan-400" : "hover:bg-gray-800 text-white"}`}
+                onClick={closeMenu}
+              >
+                {link.text}
+              </ScrollLink>
+            )}
           </li>
         ))}
       </ul>
