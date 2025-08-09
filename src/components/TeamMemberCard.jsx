@@ -19,7 +19,7 @@ export const TeamMemberCard = ({ member }) => {
         {member.bio}
       </p>
       <div className="flex justify-center space-x-3">
-        <a
+        {/* <a
           href={member.social.github}
           className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
         >
@@ -36,7 +36,7 @@ export const TeamMemberCard = ({ member }) => {
           className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
         >
           <Twitter className="w-5 h-5" />
-        </a>
+        </a> */}
       </div>
     </div>
   );
