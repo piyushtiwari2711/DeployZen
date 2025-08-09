@@ -31,12 +31,6 @@ const Footer = () => {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="#"
-                className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110"
-              >
-                <Github className="h-6 w-6" />
-              </a>
-              <a
                 href="mailto:web.deployzen@gmail.com"
                 className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110"
               >
