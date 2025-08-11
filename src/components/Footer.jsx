@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Github, Mail, Instagram } from "lucide-react";
+import { Linkedin, Github, Mail, Instagram, Twitter } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
@@ -35,6 +35,12 @@ const Footer = () => {
                 className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110"
               >
                 <Mail className="h-6 w-6" />
+              </a>
+               <a
+                href="https://x.com/deployzen"
+                className="text-gray-400 hover:text-green-400 transition-colors duration-300 transform hover:scale-110"
+              >
+                <Twitter className="h-6 w-6" />
               </a>
             </div>
           </div>

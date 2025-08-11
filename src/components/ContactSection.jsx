@@ -53,7 +53,7 @@ export const ContactSection = () => {
                       href="https://www.linkedin.com/company/deployzen2711/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Instagram"
+                      aria-label="Linkedin"
                     >
                       <Linkedin className="w-6 h-6 text-white" />
                     </a>
@@ -65,11 +65,18 @@ export const ContactSection = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    <a
+                      href="https://x.com/deployzen"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Twitter"
+                    >
                     <Twitter className="w-6 h-6 text-white" />
+                    </a>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm"></p>
-                    <p className="text-white">Twitter</p>
+                    <p className="text-gray-400 text-sm">Twitter</p>
+                    <p className="text-white">@deployzen</p>
                   </div>
                 </div>
               </div>
