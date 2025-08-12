@@ -10,7 +10,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaRegCommentDots } from "react-icons/fa";
 import React, { useState } from "react";
 
-
 function App() {
   const [showChatbot, setShowChatbot] = useState(false);
   const [chatInput, setChatInput] = useState("");
@@ -66,7 +65,6 @@ function App() {
         >
           <FaWhatsapp size={32} />
         </a>
-
       </div>
     </Router>
   );
