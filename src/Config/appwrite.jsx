@@ -1,4 +1,7 @@
 import { Client, Databases, ID } from "appwrite";
+if(!import.meta.env.VITE_APPWRITE_ENDPOINT || !import.meta.env.VITE_APPWRITE_PROJECT) {
+    throw new Error("Appwrite environment variables are not set. Please check your .env file.");
+}
 
 // Configure Appwrite client
 const client = new Client()
@@ -20,7 +23,7 @@ export async function addContactForm(name, email, subject, message) {
             import.meta.env.VITE_APPWRITE_DATABASE,
             import.meta.env.VITE_APPWRITE_COLLECTION,
             ID.unique(),
-            { name, email, subject, message }
+            { name, email, subject, message,createdAt: new Date().toISOString() }
         );
         console.log("✅ Document created:", response);
         return response;
