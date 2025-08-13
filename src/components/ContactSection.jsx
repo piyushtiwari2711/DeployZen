@@ -1,6 +1,36 @@
 import { Mail, Linkedin, Twitter, Instagram } from "lucide-react";
+import { useState } from "react";
+import { addContactForm } from "../Config/appwrite";
 
 export const ContactSection = () => {
+  const [formData,setFormData]=useState({
+    firstName:"",
+    lastNmae:"",
+    email:"",
+    subject:"",
+    message:""
+  })
+  function handleChange(e) {
+    setFormData((prev)=>({
+       ...prev,
+       [e.target.name]:e.target.value
+    }));
+  }
+  async function handleSubmit(e){
+    e.preventDefault();
+    if(!firstName || firstName.trim()==="" || !lastName||lastName.trim==="" ||!email||email.trim()===""||!subject || subject.trim()===""||!message||message.trim()==="" ){
+      alert("all fields are required!");
+      return;
+    }
+    try{
+      const name=firstName+" "+lastName;
+      const response=await addContactForm(name,email,subject,message);
+      alert("form submitted");
+    }catch(err){
+       alert("error occurred");
+    }
+  }
+
   return (
     <section id="contact" className="relative z-10 py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -88,61 +118,61 @@ export const ContactSection = () => {
             <h3 className="text-2xl font-semibold mb-6 text-white">
               Send us a Message
             </h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-300 text-sm font-medium mb-2">
+                  <label className="block text-gray-300 text-sm font-medium mb-2" htmlFor="firstName" >
                     First Name
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors duration-300"
-                    placeholder="John"
+                    placeholder="John" id="firstName" name="firstName" onChange={(e)=>handleChange(e)} value={formData.firstName}
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-300 text-sm font-medium mb-2">
+                  <label className="block text-gray-300 text-sm font-medium mb-2" htmlFor="lastName">
                     Last Name
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors duration-300"
-                    placeholder="Doe"
+                    placeholder="Doe" id="lastName" name="lastName"  onChange={(e)=>handleChange(e)} value={formData.lastName}
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">
+                <label className="block text-gray-300 text-sm font-medium mb-2" htmlFor="email">
                   Email
                 </label>
                 <input
                   type="email"
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors duration-300"
-                  placeholder="john@example.com"
+                  placeholder="john@example.com" id="email" name="email"  onChange={(e)=>handleChange(e)} value={formData.email}
                 />
               </div>
               <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">
+                <label className="block text-gray-300 text-sm font-medium mb-2" htmlFor="subject">
                   Subject
                 </label>
                 <input
                   type="text"
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors duration-300"
-                  placeholder="How can we help you?"
+                  placeholder="How can we help you?" id="subject" name="subject"  onChange={(e)=>handleChange(e)} value={formData.subject}
                 />
               </div>
               <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">
+                <label className="block text-gray-300 text-sm font-medium mb-2" htmlFor="message">
                   Message
                 </label>
                 <textarea
                   rows="4"
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors duration-300 resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your project..." id="message" name="message"  onChange={(e)=>handleChange(e)} value={formData.message}
                 ></textarea>
               </div>
               <button
-                type="submit"
+                type="submit" 
                 className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
               >
                 Send Message
