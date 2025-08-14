@@ -1,6 +1,7 @@
-import { Mail, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
 import { addContactForm } from "../Config/appwrite";
+import { SiX } from "react-icons/si";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -124,7 +125,7 @@ export const ContactSection = () => {
                       rel="noopener noreferrer"
                       aria-label="Twitter"
                     >
-                      <Twitter className="w-6 h-6 text-white" />
+                      <SiX className="w-6 h-6 text-white" />
                     </a>
                   </div>
                   <div>
