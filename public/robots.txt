@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.deployzen.in/sitemap.xml
+
+# Optional: Block common unnecessary paths for React apps
+Disallow: /static/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.json$
+
+# Allow search engines to crawl your main content
+Allow: /
+Allow: /projects
