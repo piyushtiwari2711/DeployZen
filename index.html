@@ -2,12 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
     <title>DeployZen</title>
+    <meta name="description" content="DeployZen empowers startups and enterprises by transforming bold ideas into powerful digital solutions. Experts in full-stack web & app development, trusted by startups and global businesses alike." />
+    <meta name="keywords" content="DeployZen, deployment, hosting, full-stack development, cloud, CI/CD, app development, web development, automation" />
+
+    <!-- Social Sharing -->
+    <meta property="og:title" content="DeployZen" />
+    <meta property="og:description" content="You dream it. We build it — smarter, faster, and better. Experts in full-stack web & app development." />
+    <meta property="og:image" content="/logo.jpg" />
+    <meta property="og:url" content="https://www.deployzen.in/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0d1117" />
+
+    <!-- Optional: Preload font for performance -->
+    <!-- <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- About Section (static fallback if JS is disabled) -->
+    <noscript>
+      <section id="about" style="max-width:800px;margin:2rem auto;font-family:sans-serif;line-height:1.6;">
+        <h1>About DeployZen</h1>
+        <p><strong>DeployZen empowers startups and enterprises worldwide by transforming bold ideas into powerful digital solutions.</strong></p>
+        <p>We bring together dreamers, doers, and disruptors with elite developers, designers, and strategists — all under one roof. From dynamic web platforms and scalable mobile apps to automation systems and enterprise solutions, we deliver end-to-end development that fuels business growth.</p>
+        <p><em>You dream it. We build it — smarter, faster, and better.</em></p>
+        <ul>
+          <li>Experts in full-stack web & app development</li>
+          <li>Trusted by startups and global businesses alike</li>
+          <li>Innovation-driven, impact-focused delivery</li>
+        </ul>
+      </section>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
