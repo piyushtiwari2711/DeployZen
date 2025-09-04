@@ -72,12 +72,4 @@ export const teamMembers = [
     bio: "Experienced in both client-side finesse and server-side strength, turning ideas into full-fledged digital products.",
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
-  {
-    id: 5,
-    name: "Mukul Lakhera",
-    role: "UI /UX Designer",
-    image: "/mukul.png",
-    bio: "Designing seamless user journeys with a perfect blend of creativity and usability.",
-    social: { github: "#", linkedin: "#", twitter: "#" },
-  },
 ];
