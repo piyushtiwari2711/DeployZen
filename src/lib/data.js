@@ -33,7 +33,7 @@ export const projects = [
     title: "Apna Video Call",
     description:
       "Apna Video Call - A simple video calling website with chat and screen sharing.",
-    image: "/Apnavideocall.png",
+    image: "/apnavideo.png",
     tech: ["React", "WebRtc", "Socket.io", "Node.js", "MongoDB", "Express.js"],
     link: "https://apna-video-call0.onrender.com",
   },
