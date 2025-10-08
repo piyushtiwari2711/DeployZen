@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Full-stack e-commerce solution with React, Node.js, and MongoDB",
     image:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://creatingdimensions.vercel.app/og-image.png",
     tech: ["React", "Node.js", "Firebase", "Razorpay"],
     link: "https://creatingdimensions.vercel.app/",
   },
