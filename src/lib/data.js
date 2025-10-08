@@ -7,7 +7,7 @@ export const projects = [
     image:
       "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
     tech: ["React", "Node.js", "Firebase", "Razorpay"],
-    link: "https://creating-dimensions.vercel.app/",
+    link: "https://creatingdimensions.vercel.app/",
   },
   {
     id: 2,
