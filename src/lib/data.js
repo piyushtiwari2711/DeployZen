@@ -14,7 +14,7 @@ export const projects = [
     title: "GhostGram",
     description: "GhostGram - Ask me anything, anonymously.",
     image:
-      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://ghostgram.nayalsaurav.tech/og-image.png",
     tech: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth.js"],
     link: "https://ghostgram.nayalsaurav.tech/",
   },
