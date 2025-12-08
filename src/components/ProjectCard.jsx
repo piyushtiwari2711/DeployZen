@@ -7,7 +7,7 @@ export const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+          className="object-fill w-full h-full transition-transform duration-500 hover:scale-105"
         />
       </div>
       <div className="flex flex-col items-center p-7 w-full">

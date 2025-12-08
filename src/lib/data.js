@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Full-stack e-commerce solution with React, Node.js, and MongoDB",
     image:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://creatingdimensions.vercel.app/og-image.png",
     tech: ["React", "Node.js", "Firebase", "Razorpay"],
     link: "https://creatingdimensions.vercel.app/",
   },
@@ -22,7 +22,7 @@ export const projects = [
     title: "GhostGram",
     description: "GhostGram - Ask me anything, anonymously.",
     image:
-      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://ghostgram.nayalsaurav.tech/og-image.png",
     tech: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth.js"],
     link: "https://ghostgram.nayalsaurav.tech/",
   },
