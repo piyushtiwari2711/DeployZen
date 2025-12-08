@@ -9,8 +9,16 @@ export const projects = [
     tech: ["React", "Node.js", "Firebase", "Razorpay"],
     link: "https://creatingdimensions.vercel.app/",
   },
-  {
+   {
     id: 2,
+    title: "Restaurant Website",
+    description: "Restaurant Website- For a restaurant usage.",
+    image: "/restaurant.png",
+    tech: ["React js", "MongoDB", "Tailwind CSS", "Node.js", "Express.js"],
+    link: "https://restaurant-website-livid-phi.vercel.app/",
+  },
+  {
+    id: 3,
     title: "GhostGram",
     description: "GhostGram - Ask me anything, anonymously.",
     image:
@@ -19,7 +27,7 @@ export const projects = [
     link: "https://ghostgram.nayalsaurav.tech/",
   },
   {
-    id: 3,
+    id: 4,
     title: "CoFlow",
     description:
       "A collaborative, browser based whiteboard enabling real‑time drawing and idea sharing among multiple users.",
@@ -29,7 +37,7 @@ export const projects = [
     link: "https://coflow-7r11.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Apna Video Call",
     description:
       "Apna Video Call - A simple video calling website with chat and screen sharing.",
