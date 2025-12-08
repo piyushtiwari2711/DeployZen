@@ -13,7 +13,7 @@ export const projects = [
     id: 2,
     title: "Restaurant Website",
     description: "Restaurant Website- For a restaurant usage.",
-    image: "/restaurant.png",
+    image: "/Restaurant.png",
     tech: ["React js", "MongoDB", "Tailwind CSS", "Node.js", "Express.js"],
     link: "https://restaurant-website-livid-phi.vercel.app/",
   },
