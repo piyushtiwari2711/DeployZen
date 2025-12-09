@@ -19,15 +19,6 @@ export const projects = [
   },
   {
     id: 3,
-    title: "GhostGram",
-    description: "GhostGram - Ask me anything, anonymously.",
-    image:
-      "https://ghostgram.nayalsaurav.tech/og-image.png",
-    tech: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth.js"],
-    link: "https://ghostgram.nayalsaurav.tech/",
-  },
-  {
-    id: 4,
     title: "CoFlow",
     description:
       "A collaborative, browser based whiteboard enabling real‑time drawing and idea sharing among multiple users.",
@@ -37,13 +28,22 @@ export const projects = [
     link: "https://coflow-7r11.onrender.com/",
   },
   {
-    id: 5,
+    id: 4,
     title: "Apna Video Call",
     description:
       "Apna Video Call - A simple video calling website with chat and screen sharing.",
     image: "/apnavideo.png",
     tech: ["React", "WebRtc", "Socket.io", "Node.js", "MongoDB", "Express.js"],
     link: "https://apna-video-call0.onrender.com",
+  },
+   {
+    id: 5,
+    title: "GhostGram",
+    description: "GhostGram - Ask me anything, anonymously.",
+    image:
+      "https://ghostgram.nayalsaurav.tech/og-image.png",
+    tech: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth.js"],
+    link: "https://ghostgram.nayalsaurav.tech/",
   },
 ];
 
