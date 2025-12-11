@@ -57,6 +57,14 @@ export const teamMembers = [
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
+    id: 5,
+    name: "Vikas Chauhan",
+    role: "UI/UX Designer & Logo Designer",
+    image: "/vikas.jpeg",
+    bio: "Creative UI/UX and Logo Designer dedicated to crafting intuitive, modern, and user-friendly designs.",
+    social: { github: "#", linkedin: "#", twitter: "#" },
+  },
+  {
     id: 2,
     name: "Jai Goyal",
     role: "Full Stack Developer",
@@ -72,8 +80,6 @@ export const teamMembers = [
     bio: "Transforms ideas into elegant web interfaces through thoughtful design and clean code.",
     social: { github: "#", linkedin: "#", twitter: "#" },
   }, 
-
-  
   {
     id: 4,
     name: "Saurav Nayal",
@@ -81,14 +87,5 @@ export const teamMembers = [
     image: "/saurav.png",
     bio: "Experienced in both client-side finesse and server-side strength, turning ideas into full-fledged digital products.",
     social: { github: "#", linkedin: "#", twitter: "#" },
-  },
-   {
-    id: 5,
-    name: "Vikas Chauhan",
-    role: "UI/UX Designer & Logo Designer",
-    image: "/vikas.jpeg",
-    bio: "Creative UI/UX and Logo Designer dedicated to crafting intuitive, modern, and user-friendly designs.",
-    social: { github: "#", linkedin: "#", twitter: "#" },
-  },
- 
+  }
 ];
