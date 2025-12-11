@@ -14,7 +14,7 @@ export const TeamSection = () => {
           </p>
         </div>
 
-        <div className="flex gap-8 flex-wrap justify-center">
+        <div className="flex flex-row-reverse gap-8 flex-wrap justify-center">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
