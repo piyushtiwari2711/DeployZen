@@ -1,12 +1,16 @@
 import { Client, Databases, ID } from "appwrite";
-if(!import.meta.env.VITE_APPWRITE_ENDPOINT || !import.meta.env.VITE_APPWRITE_PROJECT) {
-    throw new Error("Appwrite environment variables are not set. Please check your .env file.");
+
+const APPWRITE_ENDPOINT = import.meta.env.VITE_APPWRITE_ENDPOINT?.trim();
+const APPWRITE_PROJECT = (import.meta.env.VITE_APPWRITE_PROJECT || import.meta.env.VITE_APPWRITE_PROJECT_ID)?.trim();
+
+if (!APPWRITE_ENDPOINT || !APPWRITE_PROJECT) {
+    throw new Error("Appwrite environment variables are not set. Please check your .env file (VITE_APPWRITE_ENDPOINT and VITE_APPWRITE_PROJECT_ID).");
 }
 
 // Configure Appwrite client
 const client = new Client()
-    .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
-    .setProject(import.meta.env.VITE_APPWRITE_PROJECT);
+    .setEndpoint(APPWRITE_ENDPOINT)
+    .setProject(APPWRITE_PROJECT);
 
 const databases = new Databases(client);
 

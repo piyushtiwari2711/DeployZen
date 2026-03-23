@@ -41,9 +41,19 @@ export const projects = [
     title: "GhostGram",
     description: "GhostGram - Ask me anything, anonymously.",
     image:
-      "https://ghostgram.nayalsaurav.tech/og-image.png",
+      "https://ghostgram.nayalsaurav.in/og-image.png",
     tech: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth.js"],
-    link: "https://ghostgram.nayalsaurav.tech/",
+    link: "https://ghostgram.nayalsaurav.in/",
+  },
+  {
+    id: 6,
+    title: "SME Partner",
+    description: "SME Partner -SME Partner helps businesses get subsidies and solar solutions."
+ ,
+    image:
+      "/smepartner.png",
+    tech: ["Next.js","Tailwind CSS", "Resend" ],
+    link: "https://www.smepartner.in/",
   },
 ];
 
